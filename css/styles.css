@@ -1,1 +1,162 @@
+:root {
+    --clr-bg: #000026;
+    --clr-bg-sub: #203040;
+    --clr-bg-deal: lightgrey;
+    --clr-text: #ffffff;
 
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+
+}
+#root{
+    height: 100%;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "sub-header"
+    "deals-header"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+/*header*/
+.header{
+    height:100%;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    text-decoration: none;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.header-home a{
+    color: var(--clr-text);
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: inherit;
+    outline: 2px solid transparent;
+}
+.header-home a:hover{
+    outline:2px solid var(--clr-text);
+}
+/*Header-link*/
+.header-link{
+    padding: 0 1rem;
+    margin: 0;
+}
+.header-link a{
+    padding:auto;
+    margin:auto;
+    text-decoration: none;
+    color: var(--clr-text);
+    outline: 2px solid transparent;
+}
+.header-link:hover, .header-link.active{
+    outline:2px solid var(--clr-text);
+}
+
+.header-link a p{
+    padding: 0;
+    margin: auto;
+}
+/*Search bar*/
+.header-search{
+    width:fill;
+    padding:0;
+    margin:0;
+}
+.header-search form{
+    height: 90%;
+    justify-content: flex-start;
+    padding:0;
+    margin:0;
+}
+.header-search form select{
+    height: 100%;
+    font-size: medium;
+    max-width: 5rem;
+    outline: 2px solid transparent;
+}
+.header-search form select:hover,.header-search form select:active{
+    outline: 2px solid orange;
+}
+.header-search form input{
+    height: 100%;
+    font-size: medium;
+    outline: 2px solid transparent;
+}
+.header-search form input:hover, .header-search form input:active{
+    outline: 2px solid orange;
+}
+
+.header-search form input:last-child{
+    background: orange;
+}
+
+/*Header country*/
+.header-country select{
+    height: auto;
+    width:auto;
+    font-size: large;
+    outline: 2px solid transparent;
+}
+
+/*Header Cart*/
+.header-cart a{
+    text-decoration: none;
+    color: var(--clr-text);
+    outline: 2px solid transparent;
+}
+.header-cart:hover, .header-cart.active{
+    outline:2px solid var(--clr-text);
+}
+.header-cart b{
+    color:orange;
+}
+
+/*sub-header*/
+.sub-header{
+    margin-top: 1rem;
+    grid-area: "sub-header";
+    display: flex;
+    background-color: var(--clr-bg-sub);
+    color: var(--clr-text);
+    text-decoration: none;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+/*deals-header*/
+.deals-header{
+    grid-area: "deals-header";
+    display: flex;
+    background-color: var(--clr-bg-deal);
+    text-decoration: none;
+    padding: 1rem;
+    align-items: center;
+}
+.deals-link{
+    padding: 0 1rem;
+    margin: 0;
+}
+.deals-link a{
+    padding:auto;
+    margin:auto;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+.deals-link:hover, .deals-link.active{
+    color:orange;
+    border-bottom:2px solid orange;
+}
